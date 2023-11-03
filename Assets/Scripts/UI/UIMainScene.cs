@@ -73,4 +73,10 @@ public class UIMainScene : MonoBehaviour
             InfoPopup.Name.text = content.GetName();
         }
     }
+
+    public void BackToMainMenu()
+    {
+        // "0" is the menu scene's index
+        SceneManager.LoadScene(0);
+    }
 }
