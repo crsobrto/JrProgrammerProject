@@ -26,7 +26,10 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
-
+        if (MainManager.Instance != null) // Prevents errors if the game is run without first going through the Menu scene
+        {
+            SetColor(MainManager.Instance.TeamColor); // Set the units (forklifts) to the user-selected color
+        }
     }
 
     void SetColor(Color c)
